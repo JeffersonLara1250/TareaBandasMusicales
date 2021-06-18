@@ -1,0 +1,25 @@
+﻿@model  BandasMusicales.Models.Banda
+
+@{ 
+    ViewData["Title"] = "Detalles";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Banda</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BandaName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BandaName)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" class="btn btn-warning" asp-route-id="@Model.BandaId">Editar</a>
+    <a asp-action="Index" class="btn btn-success">Regresar</a>
+</div>
